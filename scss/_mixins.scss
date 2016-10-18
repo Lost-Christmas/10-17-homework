@@ -1,0 +1,9 @@
+@mixin align($n){
+    line-height: $n;
+    height: $n;
+    display: block;
+}
+@mixin border($t:1px,$r:1px,$b:1px,$l:1px){
+    border: 1px solid #eee;
+    border-width: $t $r $b $l;
+}

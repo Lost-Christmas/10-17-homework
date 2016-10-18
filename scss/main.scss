@@ -1,0 +1,157 @@
+@import "mixins";
+@import "type";
+@import "util";
+@import "variables";
+
+
+#header_img{
+    background: url(../img/header.jpg) no-repeat center center;background-size: cover;
+    a{
+        display: block;@extend %bigbox;height: 80px;
+    }
+}
+#header{
+    background-color: #f2f2f2;
+    .header{
+        @extend %bigbox;
+    }
+    .header_left{
+        color: $color-middle;background: url(../img/header_bor.jpg) no-repeat 128px center;@include align(30px);float: left;
+        a{
+            margin: 15px;color: $color-middle;
+            &:hover{
+                color: $color-red;
+            }
+        }
+    }
+    .phone{
+        background: url(../img/phone.jpg) no-repeat 3px 1px;padding-left: 15px;
+    }
+    .header_right{
+        float: right;overflow: hidden;
+        li{
+            float: left;
+        }
+        a{
+            float: left;@include align(30px);padding:0 15px;background: url(../img/header_bor.jpg) no-repeat right center;color: $color-middle;
+            &:hover{
+                color: $color-red;
+            }
+        }
+    }
+    .hover{
+        background: url(../img/a_bg.jpg) no-repeat 64px center;
+        a{padding-right: 25px;}
+    }
+}
+.logo{
+    @extend %bigbox;
+    >a{
+        float: left;margin: 24px 0;
+    }
+    .logo_right{
+        float: right;padding-top: 26px;
+        >div{
+            padding-top: 5px;
+        }
+    }
+    p{
+        overflow: hidden;border: 1px solid #d22147;
+    }
+    #but{
+        width: 62px;@include align(30px);text-align: center;float: right;background-color: #d22147;color: white;
+    }
+    #txt{
+        width: 287px;padding-left: 30px;background: url(../img/fdj.jpg) no-repeat 12px center;float: left;@include align(30px);
+    }
+    a{
+        color: $color-deep;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    .act{
+        color: $color-red;
+    }
+}
+#nav{
+    background-color: #222;margin-bottom: 40px;
+    a{color: white;font-size: $fontm;}
+    .nav{
+        @extend %bigbox;
+        >a{float: left;width: 105px;@include align(42px);text-align: center;} 
+    }
+    .shopcar{
+       float: right;
+       a{display: block;@include align(42px);text-align: center;width: 120px;background: #444 url(../img/shopcar.png) no-repeat 18px center;position: relative;}
+       span{width: 20px;@include align(20px);background-color: $color-deepred;position: absolute;left: 80px;top: 10px;@extend %circle;}
+    }
+}
+#content{
+    padding-bottom: 80px;@include border(0,0,1px,0);
+    .content{
+        @extend %bigbox;
+    }
+    .content_left{
+        float: left;@include border(1px,1px,0,1px);
+        a{
+            width: 158px;color: $color-deep;font-size: $fontl;padding-left: 18px;font-size: $fontm;
+        }
+        >a{
+            @include align(46px);font-weight: bold;background: url(../img/content_bg1.jpg) no-repeat 150px center;@include border(0,0,1px,0);font-size: $fontl;
+        }
+        >.act{
+            background-image: url(../img/content_bg2.jpg);
+        }
+        ul{
+            @include border(0,0,1px,0);padding: 12px 0;
+        }
+    }
+    li{
+        a{
+            @include align(30px);@extend %hover;
+        }
+        .act{
+            color: $color-red;font-weight: bold;
+        }
+    }
+    .content_right{
+        float: right;@include border;width: 886px;color: $color-deep;
+        h2{
+            @include border(0,0,1px,0);width: 846px;@include align(56px);padding-left: 40px;font-size: $fontx;font-weight: bold;color: black;
+        }
+        #main{
+            padding-left: 40px;padding-right: 40px;
+        }
+        h5,p{
+            line-height: 28px;font-size: $fontm;
+        }
+        p{
+            margin-bottom: 24px;
+        }
+        h3{
+            @include align(96px);font-size: $fontxx; 
+        }
+        h4{
+            font-size: $fontl;line-height: 40px;
+        }
+        h4,h5{font-weight: bold;}
+        a{
+            color: $color-blue;text-decoration: underline;
+        }
+    }
+    
+}
+.virtue{
+    @extend %bigbox;
+    dl{
+        float: left;overflow: hidden;
+    }
+    dt{
+        float: left;margin-right: 5px;
+    }
+    dd{
+        float: right;width: 120px;color: $color-deep;
+        p{font-weight: bold;font-size: $fontx;}
+    }
+}
